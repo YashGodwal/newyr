@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivation for You</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+        .allura-regular {
+            font-family: "Allura", serif;
+            font-weight: 800;
+            font-style: normal;
+        }
+
+        a {
+            margin-top: 30px;
+            padding: 10px 10px;
+            text-decoration: none;
+            color: white;
+            background: #e74c3c;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+
+            position: absolute;
+            bottom: 0;
+        }
+
+        a:hover {
+            background: #c0392b;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom right, #63332f, #351010, #0a0002);
+            font-family: "Allura", serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.5rem;
+            /* font-family: 'Arial', sans-serif; */
+            color: #ffb700;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 150, 180, 0.6);
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 150, 180, 0.6);
+            }
+
+            to {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 150, 180, 0.8);
+            }
+        }
+
+        p {
+            font-size: 1.7rem;
+            line-height: 2rem;
+            margin: 20px 0;
+            animation: fadeIn 2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .quote {
+            font-style: italic;
+            margin: 30px 0;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+            animation: fadeIn 3s ease-in;
+        }
+
+        .heart {
+            font-size: 50px;
+            margin-top: 20px;
+            animation: pulse 1.2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                color: rgba(255, 150, 180, 0.8);
+            }
+
+            50% {
+                transform: scale(1.2);
+                color: rgba(255, 255, 255, 1);
+            }
+
+            100% {
+                transform: scale(1);
+                color: rgba(255, 150, 180, 0.8);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <audio autoPlay loop>
+        <source src="./assets/forMotivation.mp3" type="audio/mp3" />
+        Your browser does not support the audio element.
+      </audio>
+    <div class="container">
+        <h1>Hey Sunshine </h1>
+        <p>
+            Life is full of ups and downs, but I want you to know that every step of the way,
+            you have all the strength and love within you to conquer anything. 💖
+        </p>
+        <p>
+            Your hard work, your kindness, and your beautiful soul inspire me every day.
+            You are destined for greatness, and no challenge is too big for you. Keep shining. 🌟
+        </p>
+        <div class="quote">
+            "Believe in yourself the way I believe in you. You're unstoppable, Neetu."
+        </div>
+        <p>
+            Remember: you are loved, cherished, and appreciated more than you know.
+            Your light brightens every room you walk into. Keep smiling because the world needs your sparkle.
+        </p>
+        <div class="heart">🖤</div>
+
+        <a href="index.html">Back to Home</a>
+    </div>
+</body>
+
+</html>

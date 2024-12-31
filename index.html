@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy New Year</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+      background: linear-gradient(to bottom, #000428, #010a13);
+      color: #fff;
+      /* font-family: 'Arial', sans-serif; */
+      font-family: "Satisfy", serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .snowflake {
+      position: absolute;
+      top: -10px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      pointer-events: none;
+      animation: fall 15s linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+      }
+    }
+
+    h1, p, .button-container button {
+      animation: glow 3s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 5px #ff9, 0 0 10px #ff6, 0 0 15px #ff3, 0 0 20px #ff9;
+      }
+      50% {
+        text-shadow: 0 0 10px #ff6, 0 0 20px #ff3, 0 0 30px #ff9, 0 0 40px #ff6;
+      }
+      100% {
+        text-shadow: 0 0 5px #ff9, 0 0 10px #ff6, 0 0 15px #ff3, 0 0 20px #ff9;
+      }
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      /* font-family: 'Pacifico', cursive; */
+      font-family: "Train One", serif;
+  font-weight: 400;
+      /* font-family: "Satisfy", serif; */
+    }
+
+    p {
+      font-size: 2.2rem;
+      margin: 20px 0;
+      text-align: center;
+      /* font-family: 'Georgia', serif; */
+    }
+
+    .button-container {
+      display: flex;
+      gap: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background: #ff5f6d;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      font-family: "Satisfy", serif;
+      transition: transform 0.3s ease, background-color 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background: #ffc371;
+    }
+    .happy{
+      font-size: 5rem;
+      margin-bottom: 10px;
+      font-family: "Train One", serif;
+      font-weight: 400;
+      
+    }
+    #new{
+      font-size: 3rem;
+      /* color: #ff5f6d; */
+    }
+    #year{
+      font-size: 5rem;
+      /* color: #ff5f6d; */
+    }
+    #num{
+      font-size: 5rem;
+      color: #ff5f6d;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <audio autoPlay loop>
+    <source src="./assets/for surprise.mp3" type="audio/mp3" />
+    Your browser does not support the audio element.
+  </audio>
+  <h1 class="happy"> Happy <br> <div id="new">New <div id="year">Year</div> </div> <div id="num">2025!</div></h1>
+  <p>Wishing you love, happiness, and unforgettable memories this New Year! <br>Neetu 💖</p>
+  <div class="button-container">
+    <button onclick="navigateToSurprise()">Surprise 🎁</button>
+    <button onclick="navigateToMotivate()">Motivate Me ✨</button>
+    <!-- Make this year special with love and joy! 💖 -->
+  </div>
+
+  <script>
+    // Snowfall effect
+    function createSnowflakes() {
+      const count = 10;
+      for (let i = 0; i < count; i++) {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        snowflake.style.left = Math.random() * 100 + 'vw';
+        snowflake.style.width = snowflake.style.height = Math.random() * 10 + 5 + 'px';
+        snowflake.style.animationDuration = Math.random() * 5 + 10 + 's';
+        snowflake.style.opacity = Math.random();
+        document.body.appendChild(snowflake);
+        setTimeout(() => snowflake.remove(), 15000);
+      }
+    }
+    setInterval(createSnowflakes, 500);
+
+    // Navigate to surprise page
+    function navigateToSurprise() {
+      window.location.href = 'surprise.html';
+    }
+
+    function navigateToMotivate() {
+      window.location.href = 'motivate.html';
+    }
+  </script>
+</body>
+</html>

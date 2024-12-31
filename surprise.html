@@ -1,0 +1,451 @@
+<!-- surprise.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surprise!</title>
+  <!-- <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(to bottom, #1e3c72, #2a5298);
+      color: #fff;
+      font-family: 'Georgia', serif;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-shadow: 0 0 10px #f39c12, 0 0 20px #e67e22;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin-top: 20px;
+    }
+
+    .warmth-message {
+      margin-top: 30px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      font-size: 1.3rem;
+      line-height: 1.6;
+      font-style: italic;
+      color: #f7dc6f;
+    }
+
+    a {
+      margin-top: 30px;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+      background: #e74c3c;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    a:hover {
+      background: #c0392b;
+    }
+
+    .gift-box {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      background: red;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      margin-top: -50px;
+    }
+
+    .ribbon {
+      position: absolute;
+      width: 20px;
+      height: 100%;
+      background: gold;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .ribbon-horizontal {
+      position: absolute;
+      height: 20px;
+      width: 100%;
+      background: gold;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @keyframes twinkle {
+      0% {
+        filter: brightness(1);
+      }
+
+      100% {
+        filter: brightness(1.5);
+      }
+    }
+
+    .message {
+      display: none;
+      text-align: center;
+      color: white;
+      font-size: 28px;
+      margin-top: 20px;
+      font-family: Brush Script MT, Brush Script Std, cursive;
+    }
+  </style> -->
+
+
+  <!-- //1st attempt -->
+  <!-- <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(to bottom right, #1e3c72, #2a5298);
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .box {
+      width: 150px;
+      height: 150px;
+      background: linear-gradient(135deg, #ff8c00, #ff3d00);
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.3s;
+    }
+
+    .box:hover {
+      transform: scale(1.1);
+    }
+
+    .box::before {
+      content: "🎁";
+      font-size: 50px;
+      animation: bounce 1.2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .message {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+      text-align: center;
+      font-size: 24px;
+      color: #fff;
+      animation: glow 1.5s infinite alternate;
+      transition: transform 0.5s ease-out, opacity 0.5s;
+    }
+
+    .glow {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #ff3d00, 0 0 10px #ff8c00, 0 0 20px #ff3d00;
+      }
+      to {
+        text-shadow: 0 0 10px #ff3d00, 0 0 20px #ff8c00, 0 0 40px #ff3d00;
+      }
+    }
+  </style> -->
+
+  <style>
+    /* @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap'); */
+    @import url('https://fonts.googleapis.com/css2?family=Playwrite+IS:wght@100..400&display=swap');
+
+    .playwrite-ie-guides-regular {
+      font-family: "Playwrite IE Guides", serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-shadow: 0 0 10px #f39c12, 0 0 20px #e67e22;
+      position: absolute;
+      top: 0;
+
+      /* display: flex; */
+      /* justify-content: center;
+      align-items: center; */
+      /* flex-direction: column; */
+    }
+
+    a {
+      margin-top: 30px;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+      background: #e74c3c;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+
+      position: absolute;
+      bottom: 0;
+    }
+
+    a:hover {
+      background: #c0392b;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(to bottom right, #5b1903, #060000);
+      /* font-family: Arial, sans-serif; */
+      font-family: "Playwrite IS", serif;
+  font-optical-sizing: auto;
+      /* font-family: "Allura", serif; */
+      overflow: hidden;
+    }
+
+    .box {
+      width: 150px;
+      height: 150px;
+      background: linear-gradient(135deg, #ff8c00, #ff3d00);
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .box:hover {
+      transform: scale(1.1);
+    }
+
+    .box::before {
+      content: "🎁";
+      font-size: 50px;
+      animation: bounce 1.2s infinite;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .message {
+      position: absolute;
+      opacity: 0;
+      text-align: center;
+      font-size: 28px;
+      color: #fff;
+      animation: glow 1.5s infinite alternate;
+      transition: opacity 1s ease-in;
+    }
+
+    .visible {
+      opacity: 1;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #ff3d00, 0 0 10px #ff8c00, 0 0 20px #ff3d00;
+      }
+
+      to {
+        text-shadow: 0 0 10px #ff3d00, 0 0 20px #ff8c00, 0 0 40px #ff3d00;
+      }
+    }
+
+    #fireworksCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body>
+  <audio autoPlay loop>
+    <source src="./assets/forSurprise2.mp3" type="audio/mp3" />
+    Your browser does not support the audio element.
+  </audio>
+  <h1>Surprise!</h1>
+
+  <div class="box" id="box" onclick="showMessage()"></div>
+  <div class="message" id="message">Neetu, my Sunshine 🌞, I want you to know how deeply I love you. You bring light
+    into my life, and I am so lucky to have you. Here's to a New Year filled with endless love and beautiful memories
+    together. 🌟</div>
+
+  <canvas id="fireworksCanvas"></canvas>
+  <script>
+    function showMessage() {
+      const box = document.getElementById("box");
+      const message = document.getElementById("message");
+
+
+      // Make the box disappear
+      box.style.opacity = "0";
+      setTimeout(() => {
+        box.style.display = "none"; // Remove it after animation
+      }, 300);
+
+      // Show the glowing message
+      message.classList.add("visible");
+      // Start fireworks
+      startFireworks();
+    }
+
+
+    // Fireworks effect
+    function startFireworks() {
+      const canvas = document.getElementById("fireworksCanvas");
+      const ctx = canvas.getContext("2d");
+
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      const particles = [];
+
+      function createParticle(x, y) {
+        for (let i = 0; i < 50; i++) {
+          particles.push({
+            x: x,
+            y: y,
+            dx: (Math.random() - 0.5) * 5,
+            dy: (Math.random() - 0.5) * 5,
+            radius: Math.random() * 3 + 2,
+            color: `hsl(${Math.random() * 360}, 100%, 70%)`,
+            life: 100
+          });
+        }
+      }
+
+      function animateFireworks() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        particles.forEach((particle, index) => {
+          particle.x += particle.dx;
+          particle.y += particle.dy;
+          particle.life -= 1;
+
+          ctx.beginPath();
+          ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+          ctx.fillStyle = particle.color;
+          ctx.fill();
+
+          if (particle.life <= 0) {
+            particles.splice(index, 1);
+          }
+        });
+
+        if (particles.length > 0) {
+          requestAnimationFrame(animateFireworks);
+        }
+      }
+
+      canvas.addEventListener("click", (event) => {
+        const x = event.clientX;
+        const y = event.clientY;
+        createParticle(x, y);
+        animateFireworks();
+      });
+
+      // Automatically trigger fireworks at random positions
+      setInterval(() => {
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * canvas.height;
+        createParticle(x, y);
+        animateFireworks();
+      }, 500);
+    }
+  </script>
+
+  <!-- <script>
+   
+  </script>
+  <h1>🎁 Surprise! 🎁</h1>
+
+  <div class="box" onclick="showMessage()">
+    <div class="message" id="message">You are amazing! 🌟</div>
+  </div>
+
+  <script>
+    function showMessage() {
+      const message = document.getElementById("message");
+      message.classList.add("glow");
+    }
+  </script> -->
+
+
+  <!-- Tree and gift box container -->
+  <!-- <div class="tree-container">
+    <div class="tree"></div>
+    <div class="gift-box" id="giftBox">
+      <div class="ribbon"></div>
+      <div class="ribbon-horizontal"></div>
+    </div>
+  </div>
+
+  <div class="message" id="message">
+    <p>Merry Christmas, Sunshine! 🎄</p>
+    <p>You are my greatest blessing, and having you in my life is a gift I cherish every day. </p>
+    <p>This Christmas, I wish for your dreams to shine brighter than the stars on our tree.</p>
+    <p>May our love continue to grow, bringing joy and magic to every season of our lives. </p>
+  </div>
+   -->
+  <!-- <p>You are my brightest star, and this year is ours to shine! 🌟</p>
+  <div class="warmth-message">
+    Neetu, my Sunshine 🌞, I want you to know how deeply I love you. You bring light into my life, and I am so lucky to have you. Here's to a New Year filled with endless love and beautiful memories together. ❤️
+  </div> -->
+
+  <a href="index.html">Back to Home</a>
+
+  <script src="./script.js"></script>
+
+
+</body>
+
+</html>
